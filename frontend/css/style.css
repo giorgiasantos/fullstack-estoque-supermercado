@@ -6,16 +6,21 @@ body {
     font-family: 'Nunito', sans-serif;
     font-family: 'Quicksand', sans-serif;
     padding: 20px;
-    background-color: rgb(232, 232, 233);
-    margin: 20px;
+    background-color: rgb(238, 240, 240);
+    margin: auto;
+    max-width: 90%;
+    
 }
+
+
 
 h1 {
     font-weight: bold;    
-    color: rgb(61, 60, 61);
+    color: rgb(36, 35, 35);
 }
 
 h2,h3 {
-    font-style: italic;
+    font-style: italic bold;
     color: rgb(36, 35, 35);
 }
+

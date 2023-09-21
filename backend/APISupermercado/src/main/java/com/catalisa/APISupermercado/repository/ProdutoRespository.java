@@ -1,7 +1,6 @@
 package com.catalisa.APISupermercado.repository;
 
 import com.catalisa.APISupermercado.model.ProdutoModel;
-import org.aspectj.apache.bcel.classfile.Module;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

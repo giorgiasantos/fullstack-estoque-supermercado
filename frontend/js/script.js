@@ -1,4 +1,6 @@
+
 // FORMULÁRIO DE CADASTRO - REQUISIÇÃO POST
+
 const form = document.getElementById("formulario_cadastro");
 
 form.addEventListener("submit", function(event){
@@ -38,7 +40,7 @@ fetch("http://localhost:8080/api/produtos").then((data) => {
             data1 += `
             <tbody> 
                 <tr>
-                    <th scope="row">${values.id} </td>
+                    <th>${values.id} </td>
                     <td> ${values.nome} </td>
                     <td> ${values.valor} </td>
                     <td> ${values.descricao} </td>
@@ -50,11 +52,11 @@ fetch("http://localhost:8080/api/produtos").then((data) => {
         document.getElementById("lista_produtos").innerHTML = data1;
         console.log(listarTodos);
     
-    })
+    });
 
 // BUSCA DE PRODUTOS POR ID - REQUISIÇÃO GET
 
-document.getElementById("buscar_btn").addEventListener("click", function() {
+document.getElementById("buscar_id").addEventListener("click", function() {
     const id = document.getElementById("produto_id").value;
     fetch(`http://localhost:8080/api/produtos/buscaId/${id}`)
         .then((data) => data.json())
@@ -77,3 +79,6 @@ document.getElementById("buscar_btn").addEventListener("click", function() {
             console.error("Erro: ", error);
         });
 });
+
+
+
