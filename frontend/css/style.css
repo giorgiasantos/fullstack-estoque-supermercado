@@ -1,17 +1,21 @@
+html {
+    scroll-behavior: smooth;
+}
+
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Nunito', sans-serif;
+    font-family: 'Quicksand', sans-serif;
     padding: 20px;
-    background-color: rgb(245, 237, 227);
+    background-color: rgb(232, 232, 233);
     margin: 20px;
 }
 
 h1 {
-    font-weight: bold;
-    font-style: italic;
-    color: rgb(231, 142, 9);
+    font-weight: bold;    
+    color: rgb(61, 60, 61);
 }
 
-h2 {
+h2,h3 {
     font-style: italic;
     color: rgb(36, 35, 35);
 }

@@ -54,4 +54,26 @@ fetch("http://localhost:8080/api/produtos").then((data) => {
 
 // BUSCA DE PRODUTOS POR ID - REQUISIÇÃO GET
 
-const busca = document.getElementById("formulario_busca");
+document.getElementById("buscar_btn").addEventListener("click", function() {
+    const id = document.getElementById("produto_id").value;
+    fetch(`http://localhost:8080/api/produtos/buscaId/${id}`)
+        .then((data) => data.json())
+        .then((produto) => {
+            let data2 = `
+            <tbody>
+                <tr>
+                    <td>${produto.id}</td>
+                    <td>${produto.nome}</td>
+                    <td>${produto.valor}</td>
+                    <td>${produto.descricao}</td>
+                    <td>${produto.quantidade}</td>
+                </tr>
+            </tbody>
+            `;
+            document.getElementById("resultado_produto").innerHTML = data2;
+            console.log(produto);
+        })
+        .catch((error) => {
+            console.error("Erro: ", error);
+        });
+});
